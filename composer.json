@@ -11,8 +11,8 @@
   "license": "MIT",
   "minimum-stability": "stable",
   "support": {
-    "issues": "https://github.com/Artem163397/yii2-comments/issues",
-    "source": "https://github.com/Artem163397/yii2-comments"
+    "issues": "https://github.com/Artem163397/control_comment/issues",
+    "source": "https://github.com/Artem163397/control_comment"
   },
   "authors": [
     {
@@ -25,7 +25,7 @@
     "php": ">=5.4.0",
 
     "yiisoft/yii2": "2.0.*",
-    "teo/yii2-fontawesome": "~2.10"
+    "teo_crm/yii2-fontawesome": "~2.10"
   },
   "autoload": {
     "psr-4": {
