@@ -24,7 +24,7 @@
   "require": {
     "php": ">=5.4.0",
     "yiisoft/yii2": "2.0.*",
-    "teo_crm/yii2-fontawesome": "~2.10"
+    "teo_crm/yii2-fontawesome": "@dev"
   },
   "autoload": {
     "psr-4": {
