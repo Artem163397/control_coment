@@ -1,0 +1,41 @@
+{
+  "name": "teo/yii2-comments",
+  "description": "Comments module for Yii2",
+  "keywords": [
+    "yii",
+    "comment",
+    "widget",
+    "module"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "support": {
+    "issues": "https://github.com/Artem163397/yii2-comments/issues",
+    "source": "https://github.com/Artem163397/yii2-comments"
+  },
+  "authors": [
+    {
+      "name": "Artem",
+      "email": "artem.kovalskiy.93@mail.ru",
+      "homepage": "http://shop-crm.ru/"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+
+    "yiisoft/yii2": "2.0.*",
+    "teo/yii2-fontawesome": "~2.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "Artem163397\\yii\\module\\Comments\\": ""
+    }
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
