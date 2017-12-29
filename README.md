@@ -17,7 +17,7 @@ return [
 	'modules' => [
 		// ...
 		'comments' => [
-		    'class' => 'rmrevin\yii\module\Comments\Module',
+		    'class' => 'teo_crm\yii\module\Comments\Module',
 		    'userIdentityClass' => 'app\models\User',
 		    'useRbac' => true,
 		]
@@ -26,12 +26,12 @@ return [
 ];
 ```
 
-In your `User` model (or another model implements the interface `IdentityInterface`) need to implement the interface "\rmrevin\yii\module\Comments\interfaces\CommentatorInterface"
+In your `User` model (or another model implements the interface `IdentityInterface`) need to implement the interface "\teo_crm\yii\module\Comments\interfaces\CommentatorInterface"
 ```php
 class User extends \yii\db\ActiveRecord
     implements
         \yii\web\IdentityInterface,
-        \rmrevin\yii\module\Comments\interfaces\CommentatorInterface
+        \teo_crm\yii\module\Comments\interfaces\CommentatorInterface
 {
     // ...
     
@@ -57,8 +57,8 @@ class User extends \yii\db\ActiveRecord
 In auth manager add rules (if `Module::$useRbac = true`):
 ```php
 <?php
-use \rmrevin\yii\module\Comments\Permission;
-use \rmrevin\yii\module\Comments\rbac\ItsMyComment;
+use \teo_crm\yii\module\Comments\Permission;
+use \teo_crm\yii\module\Comments\rbac\ItsMyComment;
 
 $AuthManager = \Yii::$app->getAuthManager();
 $ItsMyCommentRule = new ItsMyComment();
@@ -91,12 +91,12 @@ $AuthManager->add(new \yii\rbac\Permission([
 
 Updating database schema
 ------------------------
-After you downloaded and configured `rmrevin/yii2-comments`,
+After you downloaded and configured `teo_crm/yii2-comments`,
 the last thing you need to do is updating your database schema by applying the migrations:
 
 In `command line`:
 ```
-php yii migrate/up --migrationPath=@vendor/rmrevin/yii2-comments/migrations/
+php yii migrate/up --migrationPath=@vendor/teo_crm/yii2-comments/migrations/
 ```
 
 Usage
@@ -106,7 +106,7 @@ In view
 <?php
 // ...
 
-use rmrevin\yii\module\Comments;
+use teo_crm\yii\module\Comments;
 
 echo Comments\widgets\CommentListWidget::widget([
     'entity' => (string) 'photo-15', // type and id
@@ -174,7 +174,7 @@ Depending on which ones you need, you can set the `modelMap` config property:
 	'modules' => [
 		// ...
 		'comments' => [
-		    'class' => 'rmrevin\yii\module\Comments\Module',
+		    'class' => 'teo_crm\yii\module\Comments\Module',
 		    'userIdentityClass' => 'app\models\User',
 		    'useRbac' => true,
 		    'modelMap' => [
@@ -199,7 +199,7 @@ The package allows you to attach behavior or event handler to any model. To do t
 	'modules' => [
 		// ...
 		'comments' => [
-		    'class' => 'rmrevin\yii\module\Comments\Module',
+		    'class' => 'teo_crm\yii\module\Comments\Module',
 		    'userIdentityClass' => 'app\models\User',
 		    'useRbac' => true,
 		    'modelMap' => [
@@ -227,7 +227,7 @@ You can extend the view files supplied by this package using the `theme` compone
     'view' => [
         'theme' => [
             'pathMap' => [
-                '@vendor/rmrevin/yii2-comments/widgets/views' => '@app/views/comments', // example: @app/views/comment/comment-form.php
+                '@vendor/teo_crm/yii2-comments/widgets/views' => '@app/views/comments', // example: @app/views/comment/comment-form.php
             ],
         ],
     ],
