@@ -28,7 +28,7 @@
   },
   "autoload": {
     "psr-4": {
-      "teo_crm\\yii\\module\\Comments\\": ""
+      "rmrevin\\yii\\module\\Comments\\": ""
     }
   },
   "extra": {
