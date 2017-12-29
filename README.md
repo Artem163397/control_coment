@@ -2,7 +2,8 @@ Yii 2 Comments Module
 Installation
 ------------
 ```bash
-composer require "teo/yii2-comments:~1.4"
+
+composer require "teo_crm/yii2-comments:~1.4"
 ```
 
 Configuration
