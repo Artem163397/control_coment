@@ -25,11 +25,11 @@
     "php": ">=5.4.0",
 
     "yiisoft/yii2": "2.0.*",
-    "rmrevin/yii2-fontawesome": "~2.10"
+    "teo_crm/yii2-fontawesome": "~2.10"
   },
   "autoload": {
     "psr-4": {
-      "Artem163397\\yii\\module\\Comments\\": ""
+      "teo_crm\\yii\\module\\Comments\\": ""
     }
   },
   "extra": {
