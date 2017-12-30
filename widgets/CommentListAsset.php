@@ -5,7 +5,7 @@
  * @link https://rmrevin.ru
  */
 
-namespace rmrevin\yii\module\Comments\widgets;
+namespace teo_crm\yii\module\Comments\widgets;
 
 /**
  * Class CommentListAsset
@@ -14,7 +14,7 @@ namespace rmrevin\yii\module\Comments\widgets;
 class CommentListAsset extends \yii\web\AssetBundle
 {
 
-    public $sourcePath = '@vendor/rmrevin/yii2-comments/widgets/_assets';
+    public $sourcePath = '@vendor/teo_crm/yii2-comments/widgets/_assets';
 
     public $css = [
         'comment-list.css',

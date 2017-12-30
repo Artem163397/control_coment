@@ -5,9 +5,9 @@
  * @link https://rmrevin.ru
  */
 
-namespace rmrevin\yii\module\Comments;
+namespace teo_crm\yii\module\Comments;
 
-use rmrevin\yii\module\Comments;
+use teo_crm\yii\module\Comments;
 use yii\helpers\ArrayHelper;
 
 /**

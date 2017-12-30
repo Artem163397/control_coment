@@ -5,9 +5,9 @@
  * @link https://rmrevin.ru
  */
 
-namespace rmrevin\yii\module\Comments\models\queries;
+namespace teo_crm\yii\module\Comments\models\queries;
 
-use rmrevin\yii\module\Comments;
+use teo_crm\yii\module\Comments;
 
 /**
  * Class CommentQuery

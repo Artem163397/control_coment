@@ -5,9 +5,9 @@
  * @link https://rmrevin.ru
  */
 
-namespace rmrevin\yii\module\Comments\models;
+namespace teo_crm\yii\module\Comments\models;
 
-use rmrevin\yii\module\Comments;
+use teo_crm\yii\module\Comments;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;
 

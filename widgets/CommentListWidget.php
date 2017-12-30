@@ -5,9 +5,9 @@
  * @link https://rmrevin.ru
  */
 
-namespace rmrevin\yii\module\Comments\widgets;
+namespace teo_crm\yii\module\Comments\widgets;
 
-use rmrevin\yii\module\Comments;
+use teo_crm\yii\module\Comments;
 use yii\helpers\Html;
 
 /**
