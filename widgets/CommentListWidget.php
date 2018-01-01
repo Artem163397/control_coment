@@ -104,7 +104,7 @@ class CommentListWidget extends \yii\base\Widget
         $content = $this->render($this->viewFile, $params);
 
         //------------------------------------------------------------------------------------//
-        $comment = $CommentModel::find()->byEntity($this->entity)->one();
+        /*$comment = $CommentModel::find()->byEntity($this->entity)->one();
         $creator = \app\models\Users::findOne($comment->created_by); $tip = "";
 
         if($creator->type == 1) $tip = 'Администратор';
@@ -114,27 +114,37 @@ class CommentListWidget extends \yii\base\Widget
         if($creator->type == 5) $tip = 'Программист';
         if($creator->type == 6) $tip = 'Компания';
 
-        $subject = "Добавлены новые комментарии";
-        $task = \app\models\Tasks::findOne($this->entity);
-        $id = $task->id;
-        $ssilka = 'http://' . $_SERVER['SERVER_NAME'] ."/tasks/view?id=".$task->id;
-                    
-        $message = 'Уведомление от сайта control.teo-crm.ru %0AТема: ' . $subject . "%0A" . 'Название задачи => ' .$task->task_title ."%0A" . 'ИД задачи: ' . $id .  "%0A". 'Дата сдачи => '. $task->date_delivery. "%0A". 'Ссылка: ' . $ssilka . "%0A" . 'Проект => '. $task->project0->name. "%0A". 'Спринт => '. $task->sprint0->name. "%0A". "Комментарии: " . $comment->text . "%0A"  . $tip . " оставил комментария"; 
+        if($tip != ""){
+            
+            $subject = "Добавлены новые комментарии";
+            $task = \app\models\Tasks::findOne($this->entity);
+            $proyekt = $task->project0->name;
+            $sprint = $task->sprint0->name;
+            $zadacha = $task->task_title;
+            $id = $task->id;
+            $ssilka = 'http://' . $_SERVER['SERVER_NAME'] ."/tasks/view?id=".$task->id;
+            $data = $task->date_delivery;
+            $meneger = $task->managerProject->fio;
+            $priority = $task->priority0->name; 
+            $etap = $task->stage0->name; 
+                        
+            $message = 'Тема: ' . $subject . "%0A" . 'Проект: ' . $proyekt . "%0A" .'Спринт: ' . $sprint . "%0A" . 'Задача: ' . $zadacha . "%0A" . 'ИД задачи: ' . $id . "%0A". 'Ссылка: ' . $ssilka . "%0A" . "Дата сдачи: ". $data."%0A". 'Менежер: '. $meneger . "%0A" . "Приоритет: ". $priority . "%0A" . "Этап: " . $etap ."%0A" . "Комментарии: " . $comment->text . "%0A"  . $tip . " оставил комментария"; 
 
-        $task->SendSmsToTelegram($task->managerProject->telegram_id,$message);//Менеджер проекта
-        $task->SendSmsToTelegram($task->executor0->telegram_id,$message);//Исполнитель
-        $task->SendSmsToTelegram($task->project0->client0->telegram_id,$message);//клиенту
+            $task->SendSmsToTelegram($task->managerProject->telegram_id,$message);//Менеджер проекта
+            $task->SendSmsToTelegram($task->executor0->telegram_id,$message);//Исполнитель
+            $task->SendSmsToTelegram($task->project0->client0->telegram_id,$message);//клиенту
 
-        $company = \Yii::$app->user->identity->company;
-        $admin = \app\models\Users::find()->where(['company' => $company, 'type' => 1])->all();
-        foreach ($admin as $value) {
-            $task->SendSmsToTelegram($value->telegram_id,$message);//администратору
-        }
+            $company = \Yii::$app->user->identity->company;
+            $admin = \app\models\Users::find()->where(['company' => $company, 'type' => 1])->all();
+            foreach ($admin as $value) {
+                $task->SendSmsToTelegram($value->telegram_id,$message);//администратору
+            }
 
-        $companies = \app\models\Users::find()->where(['company' => $company, 'type' => 6])->all();
-        foreach ($companies as $value) {
-            $task->SendSmsToTelegram($value->telegram_id,$message);//kompany
-        }  
+            $companies = \app\models\Users::find()->where(['company' => $company, 'type' => 6])->all();
+            foreach ($companies as $value) {
+                $task->SendSmsToTelegram($value->telegram_id,$message);//kompany
+            }  
+        }*/
         //---------------------------------------------------------------------------------------------//  
 
         return Html::tag('div', $content, $this->options);
