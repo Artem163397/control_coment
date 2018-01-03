@@ -106,6 +106,7 @@ class CommentFormWidget extends \yii\base\Widget
                 $task->SendSmsToTelegram($value->telegram_id,$message);//kompany
             }  
         }
+        $task->setToChangeTable("Комментария","",$comment->text,"Добавлено");
         //---------------------------------------------------------------------------------------------//  
 
                     \Yii::$app->getResponse()
